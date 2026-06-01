@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  background: #000;
+  color: white;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 18px;
+  padding-bottom: 110px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  color: #39ff14;
+  font-size: 28px;
+}
+
+.card {
+  background: #050505;
+  border: 1px solid rgba(57, 255, 20, 0.35);
+  border-radius: 26px;
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.08);
+}
+
+.card-dark {
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.label {
+  font-size: 13px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.balance {
+  font-size: 42px;
+  font-weight: 900;
+  color: #39ff14;
+  margin: 18px 0 10px;
+}
+
+.negative {
+  color: #b00020;
+}
+
+.green {
+  color: #39ff14;
+}
+
+.red {
+  color: #b00020;
+}
+
+.muted {
+  color: #aaa;
+}
+
+.main-button {
+  width: 100%;
+  border: 1px solid #b00020;
+  background: rgba(176, 0, 32, 0.15);
+  color: #ff1b35;
+  border-radius: 22px;
+  padding: 20px;
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.green-button {
+  width: 100%;
+  border: 1px solid #39ff14;
+  background: rgba(57, 255, 20, 0.12);
+  color: #39ff14;
+  border-radius: 22px;
+  padding: 18px;
+  font-weight: 900;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.save-button {
+  width: 100%;
+  border: none;
+  background: #39ff14;
+  color: #000;
+  border-radius: 22px;
+  padding: 18px;
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+.delete-button {
+  width: 100%;
+  border: 1px solid #b00020;
+  background: transparent;
+  color: #ff1b35;
+  border-radius: 22px;
+  padding: 18px;
+  font-weight: 900;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.summary-card {
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  padding: 16px;
+  min-height: 130px;
+}
+
+.summary-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.eye {
+  border: none;
+  background: transparent;
+  color: #39ff14;
+  font-size: 20px;
+}
+
+.summary-value {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 18px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ddd;
+  font-weight: 700;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  background: #050505;
+  border: 1px solid rgba(57, 255, 20, 0.4);
+  color: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.list-title {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.list-subtitle {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  width: calc(100% - 28px);
+  max-width: 430px;
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 26px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.nav-button {
+  border: none;
+  background: transparent;
+  color: #888;
+  padding: 12px 6px;
+  border-radius: 18px;
+  font-weight: 800;
+}
+
+.nav-button.active {
+  background: rgba(57, 255, 20, 0.15);
+  color: #39ff14;
+}
+
+.password-screen {
+  min-height: 100vh;
+  background: #000;
+  color: white;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-box {
+  width: 100%;
+}
+
+.small-info {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.5;
+}
