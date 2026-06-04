@@ -1,18 +1,18 @@
 {
-    "name": "Enzo Finanças",
-    "short_name": "Enzo",
-    "description": "Aplicativo simples para controle financeiro pessoal.",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#000000",
-    "theme_color": "#39ff14",
-    "orientation": "portrait",
-    "icons": [
-      {
-        "src": "/icon.svg",
-        "sizes": "any",
-        "type": "image/svg+xml",
-        "purpose": "any maskable"
-      }
-    ]
-  }
+  "name": "Lais Finanças",
+  "short_name": "Lais",
+  "description": "Aplicativo simples para controle financeiro pessoal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#efe3d0",
+  "theme_color": "#efe3d0",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

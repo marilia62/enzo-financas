@@ -153,12 +153,12 @@ const hiddenMoney = 'R$ ••••••';
 
 const initialData: AppData = {
   config: {
-    nomeUsuario: 'Enzo Chagas',
-    salarioMensal: 2300,
+    nomeUsuario: 'Lais Goulart',
+    salarioMensal: 3349,
     diaPagamento: 5,
     dataProximoPagamento: '2026-07-05',
     moeda: 'BRL',
-    senhaAcesso: '1234',
+    senhaAcesso: '2113',
     mostrarSaldoDisponivel: false,
     mostrarDespesasDiarias: false,
     mostrarDespesasFixas: false,
@@ -272,40 +272,18 @@ const initialData: AppData = {
     },
   ],
   
-  saldosConta: [
-    {
-      id: 1,
-      descricao: "Nubank Saldo",
-      bancoId: 1,
-      valor: 3623.76,
-      tipoDestino: "saldo_em_conta",
-      podeUsarParaCobrirGastos: true,
-      dataMovimentacao: todayISO(),
-    },
-  ],
+  saldosConta: [],
   
-  investimentos: [
-    {
-      id: 1,
-      descricao: "Nubank investimento",
-      bancoId: 2,
-      tipoInvestimento: "Investimento",
-      valorAtual: 1001.41,
-      valorMeta: 0,
-      dataMeta: "",
-      observacao: "",
-      podeUsarParaGastos: false,
-    },
-  ],
+  investimentos: [],
   
   despesasDiarias: [],
   
   despesasFixas: [
     {
       id: 1,
-      descricao: "Faculdade",
+      descricao: "Aluguel",
       valor: 700,
-      categoriaId: 10,
+      categoriaId: 3,
       quantidadeMeses: "sem prazo",
       dataInicio: todayISO(),
       dataFim: "",
@@ -316,9 +294,9 @@ const initialData: AppData = {
     },
     {
       id: 2,
-      descricao: "Gympass",
-      valor: 90,
-      categoriaId: 2,
+      descricao:"Shopify",
+      valor: 12.9,
+      categoriaId: 7,
       quantidadeMeses: "sem prazo",
       dataInicio: todayISO(),
       dataFim: "",
@@ -329,8 +307,47 @@ const initialData: AppData = {
     },
     {
       id: 3,
-      descricao: "Plano TIM",
-      valor: 85,
+      descricao: "Faculdade",
+      valor: 380,
+      categoriaId: 10,
+      quantidadeMeses: "até dezembro de 2026",
+      dataInicio: todayISO(),
+      dataFim: "2026-12-31",
+      semDataFinal: false,
+      status: "ativa",
+      editavel: true,
+      observacao: "",
+    },
+    {
+        id: 4,
+        descricao: "Revista Dona Lucia",
+        valor: 300,
+        categoriaId: 7,
+        quantidadeMeses: "julho de 2026",
+        dataInicio: "2026-07-01",
+        dataFim: "2026-07-31",
+        semDataFinal: false,
+        status: "ativa",
+        editavel: true,
+        observacao: "",
+      },
+      {
+        id: 5,
+        descricao: "Revista Dona Lucia",
+        valor: 100,
+        categoriaId: 7,
+        quantidadeMeses: "agosto de 2026",
+        dataInicio: "2026-08-01",
+        dataFim: "2026-08-31",
+        semDataFinal: false,
+        status: "ativa",
+        editavel: true,
+        observacao: "",
+      },
+      {
+      id: 6,
+      descricao: "TIM",
+      valor: 52.31,
       categoriaId: 6,
       quantidadeMeses: "sem prazo",
       dataInicio: todayISO(),
@@ -341,10 +358,36 @@ const initialData: AppData = {
       observacao: "",
     },
     {
-      id: 4,
-      descricao: "Aluguel e Dízimo",
-      valor: 900,
-      categoriaId: 3,
+      id: 7,
+      descricao: "Fatura cartão",
+      valor: 500,
+      categoriaId: 9,
+      quantidadeMeses: "até dezembro de 2026",
+      dataInicio: todayISO(),
+      dataFim: "2026-12-31",
+      semDataFinal: false,
+      status: "ativa",
+      editavel: true,
+      observacao: "",
+    },
+    {
+      id: 8,
+      descricao: "ChatGPT",
+      valor: 99.9,
+      categoriaId: 7,
+      quantidadeMeses: "sem prazo",
+      dataInicio: todayISO(),
+      dataFim: "",
+      semDataFinal: true,
+      status: "ativa",
+      editavel: true,
+      observacao: "",
+    },
+    {
+      id: 9,
+      descricao: "Cofrinho Nubank",
+      valor: 100,
+      categoriaId: 7,
       quantidadeMeses: "sem prazo",
       dataInicio: todayISO(),
       dataFim: "",
@@ -357,99 +400,13 @@ const initialData: AppData = {
   
   despesasPagas: [],
   
-  cartaoCredito: [
-    {
-      id: 1,
-      mesAno: "07/2026",
-      valor: 1401.11,
-    },
-    {
-      id: 2,
-      mesAno: "08/2026",
-      valor: 1152.0,
-    },
-    {
-      id: 3,
-      mesAno: "09/2026",
-      valor: 912.73,
-    },
-    {
-      id: 4,
-      mesAno: "10/2026",
-      valor: 867.42,
-    },
-    {
-      id: 5,
-      mesAno: "11/2026",
-      valor: 371.86,
-    },
-    {
-      id: 6,
-      mesAno: "12/2026",
-      valor: 66.66,
-    },
-    {
-      id: 7,
-      mesAno: "01/2027",
-      valor: 66.66,
-    },
-  ],
+  cartaoCredito: [],
   
-  emprestimosMensais: [
-    {
-      id: 1,
-      mesAno: "07/2026",
-      valor: 389.67,
-    },
-    {
-      id: 2,
-      mesAno: "08/2026",
-      valor: 216.65,
-    },
-    {
-      id: 3,
-      mesAno: "09/2026",
-      valor: 96.12,
-    },
-    {
-      id: 4,
-      mesAno: "10/2026",
-      valor: 96.12,
-    },
-    {
-      id: 5,
-      mesAno: "11/2026",
-      valor: 96.12,
-    },
-    {
-      id: 6,
-      mesAno: "12/2026",
-      valor: 96.12,
-    },
-    {
-      id: 7,
-      mesAno: "01/2027",
-      valor: 96.12,
-    },
-    {
-      id: 8,
-      mesAno: "02/2027",
-      valor: 96.12,
-    },
-    {
-      id: 9,
-      mesAno: "03/2027",
-      valor: 96.12,
-    },
-    {
-      id: 10,
-      mesAno: "04/2027",
-      valor: 96.12,
-    },
-  ],
+  emprestimosMensais: [],
   
   emprestimos: [],
   };
+  
   function getMesAnoReferencia() {
     const hoje = new Date();
   
@@ -521,18 +478,18 @@ function getBankName(data: AppData, id: number) {
 
 export default function App() {
   const [unlocked, setUnlocked] = useState(() => {
-    return sessionStorage.getItem('enzo-financas-unlocked') === 'true';
+    return sessionStorage.getItem('lais-financas-unlocked') === 'true';
   });
 
   const [screen, setScreen] = useState<Screen>('home');
 
   const [data, setData] = useState<AppData>(() => {
-    const saved = localStorage.getItem('enzo-financas-mvp');
+    const saved = localStorage.getItem('lais-financas-mvp');
     return saved ? JSON.parse(saved) : initialData;
   });
 
   useEffect(() => {
-    localStorage.setItem('enzo-financas-mvp', JSON.stringify(data));
+    localStorage.setItem('lais-financas-mvp', JSON.stringify(data));
   }, [data]);
 
   const totals = useMemo(() => {
@@ -623,7 +580,7 @@ export default function App() {
   if (!unlocked) {
     return (
       <PasswordScreen
-        savedPassword={data.config.senhaAcesso || '1234'}
+        savedPassword={data.config.senhaAcesso || '2113'}
         onUnlock={() => setUnlocked(true)}
       />
     );
@@ -718,7 +675,7 @@ function PasswordScreen({
 
   function enter() {
     if (password === savedPassword) {
-      sessionStorage.setItem('enzo-financas-unlocked', 'true');
+      sessionStorage.setItem('lais-financas-unlocked', 'true');
       onUnlock();
       return;
     }
@@ -733,7 +690,7 @@ function PasswordScreen({
           <div style={{ textAlign: 'center', marginBottom: 24 }}>
             <div style={{ fontSize: 42 }}>🔒</div>
             <p className="label">Acesso protegido</p>
-            <h1 className="header-title">Enzo Chagas</h1>
+            <h1 className="header-title">Lais Goulart</h1>
           </div>
 
           <div className="input-group">
@@ -1271,6 +1228,7 @@ function FixedExpensesScreen({
   const emprestimosMensaisSelecionado = emprestimoMensalItem
     ? Number(emprestimoMensalItem.valor || 0)
     : 0;
+    
 
   function isDespesaPaga(
     tipo: "fixa" | "cartao" | "emprestimo",
@@ -1405,7 +1363,20 @@ function FixedExpensesScreen({
 
     setEditing(null);
   }
-
+  function despesaFixaPertenceAoMes(item: DespesaFixa) {
+    const [mes, ano] = mesAnoSelecionado.split("/").map(Number);
+  
+    const inicioMes = new Date(ano, mes - 1, 1);
+    const fimMes = new Date(ano, mes, 0);
+  
+    const dataInicio = item.dataInicio ? new Date(item.dataInicio + "T00:00:00") : inicioMes;
+    const dataFim = item.dataFim ? new Date(item.dataFim + "T00:00:00") : null;
+  
+    if (dataInicio > fimMes) return false;
+    if (dataFim && dataFim < inicioMes) return false;
+  
+    return true;
+  }
   if (editing) {
     return (
       <div className="app">
@@ -1684,7 +1655,9 @@ function FixedExpensesScreen({
           <p className="muted">Nenhuma despesa fixa cadastrada.</p>
         </div>
       ) : (
-        data.despesasFixas.map((despesa) => (
+        data.despesasFixas
+  .filter((despesa) => despesaFixaPertenceAoMes(despesa))
+  .map((despesa) => (
           <div className="list-item" key={despesa.id}>
             <div>
               <div className="list-title">{despesa.descricao}</div>
@@ -1761,8 +1734,8 @@ function SettingsScreen({
 
     if (!confirmClear) return;
 
-    localStorage.removeItem('enzo-financas-mvp');
-    sessionStorage.removeItem('enzo-financas-unlocked');
+    localStorage.removeItem('lais-financas-mvp');
+    sessionStorage.removeItem('lais-financas-unlocked');
     window.location.reload();
   }
 
